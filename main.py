@@ -89,7 +89,7 @@ def train_model():
     criterion = nn.CrossEntropyLoss()
 
     WEIGHT_DECAY_SGD = 5e-4
-    EPOCHS = 60
+    EPOCHS = 200
 
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=WEIGHT_DECAY_SGD)
     scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS)
@@ -133,7 +133,7 @@ def evaluate_model1(model):
     total = 0
     model.eval()
     with torch.no_grad():
-        for data in train_loader:
+        for data in train_loader: 
             images, labels = data
             images, labels = images.to(device), labels.to(device)
             outputs = model(images)
