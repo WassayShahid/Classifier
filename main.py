@@ -89,7 +89,7 @@ def train_model():
     criterion = nn.CrossEntropyLoss()
 
     WEIGHT_DECAY_SGD = 5e-4
-    EPOCHS = 200
+    EPOCHS = 60
 
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=WEIGHT_DECAY_SGD)
     scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS)
