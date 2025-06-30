@@ -1,4 +1,9 @@
-*.pth
+cifar10_cnn1.pth
+cifar10_cnn2.pth
+cifar10_cnn3.pth
+cifar10_cnn4.pth
+cifar10_cnn93.3.pth
+cifar10_cnn256.pth
 data
 classifier.py
 
